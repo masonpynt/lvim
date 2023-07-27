@@ -1,0 +1,16 @@
+require("modicator").setup {
+  -- Warn if required option missing
+  show_warnings = true,
+  highlights = {
+    defaults = {
+      bold = true,
+      italic = false,
+    },
+  },
+}
+
+vim.api.nvim_create_autocmd({ "Colorscheme" }, {
+  callback = function()
+    vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#388bfd", bg = "NONE" })
+  end,
+})
