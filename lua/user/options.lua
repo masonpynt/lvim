@@ -6,15 +6,14 @@ lvim.builtin.alpha.dashboard.section.header.val = {
   "/_____/\\__,_/_/ /_/\\__,_/_/    |___/_/_/ /_/ /_/ ",
 }
 
-lvim.colorscheme = "primer_dark"
+--lvim.colorscheme = "primer_dark"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.reload_config_on_save = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.terminal.persist_mode = false
-lvim.builtin.nvimtree.setup.view.side = false
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.view.side = false lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.dap.active = true
 lvim.keys.term_mode = { ["<C-l>"] = false }
@@ -50,7 +49,7 @@ local options = {
   laststatus = 3,
   showcmd = false,
   ruler = false,
-  relativenumber = true, -- set relative numbered lines
+--  relativenumber = true, -- set relative numbered lines
   numberwidth = 4, -- set number column width to 2 {default 4}
   signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
   wrap = false, -- display lines as one long line
