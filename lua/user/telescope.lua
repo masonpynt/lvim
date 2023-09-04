@@ -1,4 +1,4 @@
-lvim.builtin.telescope.default.file_ignore_patterns = {
+lvim.builtin.telescope.defaults.file_ignore_patterns = {
   ".git/",
   "target/",
   "docs/",
@@ -8,6 +8,9 @@ lvim.builtin.telescope.default.file_ignore_patterns = {
   "%.sqlite3",
   "%.ipynb",
   "node_modules/*",
+  -- "%.jpg",
+  -- "%.jpeg",
+  -- "%.png",
   "%.svg",
   "%.otf",
   "%.ttf",
@@ -19,16 +22,16 @@ lvim.builtin.telescope.default.file_ignore_patterns = {
   ".settings/",
   ".vscode/",
   "__pycache__/",
-  "build",
+  "build/",
   "env/",
   "gradle/",
   "node_modules/",
-  "%.pbd",
+  "%.pdb",
   "%.dll",
   "%.class",
   "%.exe",
   "%.cache",
-  "%ico",
+  "%.ico",
   "%.pdf",
   "%.dylib",
   "%.jar",
@@ -48,9 +51,9 @@ lvim.builtin.telescope.default.file_ignore_patterns = {
   "%.flac",
   "%.tar.gz",
 }
-local _, actions pcall(require, "telescope.actions")
+local _, actions = pcall(require, "telescope.actions")
 lvim.builtin.telescope.defaults.mappings = {
-  --input mode
+  -- for input mode
   i = {
     ["<C-n>"] = actions.cycle_history_next,
     ["<C-p>"] = actions.cycle_history_prev,

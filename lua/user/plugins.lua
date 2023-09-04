@@ -1,25 +1,30 @@
--- All additional plugins
-lvim.plugins {
+-- Additional Plugins
+lvim.plugins = {
   {
-    "mawkler/modicator.nvim"
+    "mawkler/modicator.nvim",
     event = "ColorScheme",
   },
   "HiPhish/nvim-ts-rainbow2",
+  -- {
+  --   dir = "/Users/chris/Repos/bookmark.nvim",
+  -- },
   "andymass/vim-matchup",
   "lunarvim/synthwave84.nvim",
   {
-    "kndndrj/nvim-dbee"
+    "kndndrj/nvim-dbee",
     build = function()
       require("dbee").install()
     end,
   },
   "kkharji/sqlite.lua",
-  { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
-  { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
-  { url = "git@github.com:LunarVim/primer.nvim.git" },
+  --{ url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
+  --{ url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
+  --{ url = "git@github.com:LunarVim/primer.nvim.git" },
+  -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
+  -- "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   "opalmay/vim-smoothie",
@@ -30,6 +35,7 @@ lvim.plugins {
   "windwp/nvim-ts-autotag",
   "kylechui/nvim-surround",
   "christianchiarulli/harpoon",
+  -- "MattesGroeger/vim-bookmarks",
   "NvChad/nvim-colorizer.lua",
   "moll/vim-bbye",
   "folke/todo-comments.nvim",
@@ -55,6 +61,7 @@ lvim.plugins {
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
+  -- "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
     version = "v0.3.0",
@@ -66,7 +73,7 @@ lvim.plugins {
           name = "crates.nvim",
         },
       }
-    end
+    end,
   },
   "MunifTanjim/nui.nvim",
   "jackMort/ChatGPT.nvim",
@@ -85,12 +92,23 @@ lvim.plugins {
     build = "cd js && npm ci",
   },
   {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
+  {
     "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua "},
+    after = { "copilot.lua" },
     config = function()
       require("copilot_cmp").setup()
     end,
   },
+  -- {
+  --   "tzachar/cmp-tabnine",
+  --   event = "BufRead",
+  --   build = "./install.sh",
+  -- },
+
   "MunifTanjim/nui.nvim",
   "Bryley/neoai.nvim",
   "mfussenegger/nvim-dap-python",
@@ -102,5 +120,12 @@ lvim.plugins {
   },
   "ThePrimeagen/vim-be-good",
   "lambdalisue/suda.vim",
+  -- "folke/noice.nvim",
+  -- "rcarriga/nvim-notify",
 
+  -- https://github.com/jose-elias-alvarez/typescript.nvim
+  -- "rmagatti/auto-session",
+  -- "rmagatti/session-lens"
+  -- "christianchiarulli/nvim-ts-rainbow",
+  -- "karb94/neoscroll.nvim",
 }
