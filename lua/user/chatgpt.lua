@@ -66,6 +66,7 @@ require("chatgpt").setup {
   --   new_session = "<C-n>",
   --   cycle_windows = "<C-l>",
   -- },
+  
 }
 
 local opts = { noremap = true, silent = true }

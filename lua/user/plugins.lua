@@ -77,7 +77,6 @@ lvim.plugins = {
     end,
   },
   "MunifTanjim/nui.nvim",
-  "jackMort/ChatGPT.nvim",
   {
     "jinh0/eyeliner.nvim",
     config = function()
@@ -121,6 +120,19 @@ lvim.plugins = {
   },
   "ThePrimeagen/vim-be-good",
   "lambdalisue/suda.vim",
+  -- Lazy
+{
+  "jackMort/ChatGPT.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("chatgpt").setup()
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+}
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 
