@@ -28,9 +28,9 @@ local pyright_opts = {
 require("lvim.lsp.manager").setup("pyright", pyright_opts)
 
 -- setup formatting
-
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup { { name = "black" } }
+-- lvim.format_on_save.pattern = { "*.py" }
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup { { command = "flake8", args = { "--ignore=E203,E501" }, filetypes = { "python" } } }
@@ -44,8 +44,8 @@ local opts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
--- setup debug adapters
-lvim.bultin.dap.active = true
+-- setup debug adapter
+lvim.builtin.dap.active = true
 local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
 pcall(function()
   require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
@@ -55,12 +55,13 @@ end)
 require("neotest").setup {
   adapters = {
     require "neotest-python" {
-
+      -- Extra arguments for nvim-dap configuration
+      -- See https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for values
       dap = {
         justMyCode = false,
         console = "integratedTerminal",
       },
-      args = { "--log-level", "DEBUG", "--quiet"},
+      args = { "--log-level", "DEBUG", "--quiet" },
       runner = "pytest",
     },
   },
@@ -69,7 +70,7 @@ require("neotest").setup {
 local mappings = {
   C = {
     name = "Python",
-    c = { "<cmd>lua reuqire('swenv.api').pick_venv()<cr>", "Choose Env" },
+    c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
   },
 }
 
