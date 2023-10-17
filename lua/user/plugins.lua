@@ -9,7 +9,7 @@ lvim.plugins = {
   -- {
   --   dir = "/Users/chris/Repos/bookmark.nvim",
   -- },
-  "andymass/vim-matchup",
+--  "andymass/vim-matchup",
   "lunarvim/synthwave84.nvim",
   {
     "kndndrj/nvim-dbee",
