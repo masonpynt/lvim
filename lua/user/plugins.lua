@@ -9,7 +9,7 @@ lvim.plugins = {
   -- {
   --   dir = "/Users/chris/Repos/bookmark.nvim",
   -- },
---  "andymass/vim-matchup",
+  --  "andymass/vim-matchup",
   "lunarvim/synthwave84.nvim",
   {
     "kndndrj/nvim-dbee",
@@ -18,10 +18,10 @@ lvim.plugins = {
     end,
   },
   "kkharji/sqlite.lua",
-  --{ url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
-  --{ url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
-  --{ url = "git@github.com:LunarVim/primer.nvim.git" },
-  -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
+  { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
+  { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
+  { url = "git@github.com:LunarVim/primer.nvim.git" },
+  --{ "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
@@ -91,18 +91,18 @@ lvim.plugins = {
     "0x100101/lab.nvim",
     build = "cd js && npm ci",
   },
- -- {
- --   "zbirenbaum/copilot.lua",
- --   cmd = "Copilot",
- --   event = "InsertEnter",
- -- },
- -- {
- --   "zbirenbaum/copilot-cmp",
- --   after = { "copilot.lua" },
- --   config = function()
- --     require("copilot_cmp").setup()
- --   end,
- -- },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  },
   -- {
   --   "tzachar/cmp-tabnine",
   --   event = "BufRead",
@@ -121,18 +121,18 @@ lvim.plugins = {
   "ThePrimeagen/vim-be-good",
   "lambdalisue/suda.vim",
   -- Lazy
-{
-  "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("chatgpt").setup()
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
-}
+  --{
+  --  "jackMort/ChatGPT.nvim",
+  --    event = "VeryLazy",
+  --    config = function()
+  --      require("chatgpt").setup()
+  --    end,
+  --    dependencies = {
+  --      "MunifTanjim/nui.nvim",
+  --      "nvim-lua/plenary.nvim",
+  --      "nvim-telescope/telescope.nvim"
+  --    }
+  --}
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 

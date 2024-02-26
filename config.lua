@@ -1,8 +1,3 @@
--- plugins --
---lvim.plugins = {
---{"lambdalisue/suda.vim"}
---}
--- w!! --
 reload "user.plugins"
 reload "user.options"
 reload "user.keymaps"
@@ -14,7 +9,7 @@ reload "user.webdev-icons"
 reload "user.cybu"
 reload "user.neotest"
 reload "user.surround"
---reload "user.bookmark"
+reload "user.bookmark"
 reload "user.todo-comments"
 reload "user.jaq"
 reload "user.fidget"
@@ -41,4 +36,3 @@ reload "nostr"
 reload "user.astro-tools"
 reload "user.matchup"
 reload "user.modicator"
-vim.cmd [[noreabbrev <expr> w!! (getcmdtype() == ':' && getcmdline() == 'w!!') ? 'SudaWrite' : 'w!!']]

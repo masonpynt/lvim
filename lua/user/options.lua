@@ -6,7 +6,7 @@ lvim.builtin.alpha.dashboard.section.header.val = {
   "/_____/\\__,_/_/ /_/\\__,_/_/    |___/_/_/ /_/ /_/ ",
 }
 
---lvim.colorscheme = "primer_dark"
+lvim.colorscheme = "primer_dark"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.reload_config_on_save = false
